@@ -21,7 +21,10 @@ public class Customer {
     private String middleName;
     @OneToMany(mappedBy = "customer", targetEntity = PhoneNumber.class)
     private List<PhoneNumber> phoneNumbers;
-
+    @Column(name = "credentials_id")
+    private long credentialsId;
+    @Column(name = "location_id")
+    private long locationId;
 
     public Customer() {
 
