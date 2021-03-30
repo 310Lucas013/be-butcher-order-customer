@@ -15,7 +15,7 @@ public class PhoneNumber {
     @Column(name = "phone_number")
     private String phoneNumber;
     @ManyToOne
-    @JoinColumn(name = "Customer_id")
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 
     public PhoneNumber() {
