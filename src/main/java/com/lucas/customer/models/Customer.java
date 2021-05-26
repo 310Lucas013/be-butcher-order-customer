@@ -30,4 +30,16 @@ public class Customer {
 
     }
 
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", phoneNumbers=" + phoneNumbers.size() +
+                ", credentialsId=" + credentialsId +
+                ", locationId=" + locationId +
+                '}';
+    }
 }
