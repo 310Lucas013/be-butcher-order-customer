@@ -1,12 +1,12 @@
 package com.lucas.customer.models;
 
-import lombok.Data;
+//import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Data
+//@Data
 @Table(name = "Customer")
 public class Customer {
     @Id
@@ -28,6 +28,62 @@ public class Customer {
 
     public Customer() {
 
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public List<PhoneNumber> getPhoneNumbers() {
+        return phoneNumbers;
+    }
+
+    public void setPhoneNumbers(List<PhoneNumber> phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+    }
+
+    public long getCredentialsId() {
+        return credentialsId;
+    }
+
+    public void setCredentialsId(long credentialsId) {
+        this.credentialsId = credentialsId;
+    }
+
+    public long getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(long locationId) {
+        this.locationId = locationId;
     }
 
     @Override
