@@ -5,6 +5,8 @@ import com.lucas.customer.models.Customer;
 import com.lucas.customer.repositories.CustomerRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CustomerService {
     private final CustomerRepository customerRepository;

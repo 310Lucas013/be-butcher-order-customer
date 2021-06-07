@@ -9,6 +9,7 @@ import com.lucas.customer.models.Customer;
 import com.lucas.customer.models.PhoneNumber;
 import com.lucas.customer.services.CustomerService;
 import com.lucas.customer.services.PhoneNumberService;
+import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -30,7 +31,7 @@ public class CustomerController {
         this.phoneNumberService = phoneNumberService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping(value = "/{id}", produces = "application/json")
     public ResponseEntity<String> getCustomer(@PathVariable("id") Long id) {
         Gson gson = initiateGson();
         Customer customer = customerService.getCustomerByCredentialsId(id);
